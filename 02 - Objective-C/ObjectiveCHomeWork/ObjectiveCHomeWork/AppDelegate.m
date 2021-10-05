@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Prototype.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //Тест домашней работы по GoF паттернам. Выбран паттерн: Прототип
+    Test *test = [Test new];
+    [test someClientCode];
     return YES;
 }
 
