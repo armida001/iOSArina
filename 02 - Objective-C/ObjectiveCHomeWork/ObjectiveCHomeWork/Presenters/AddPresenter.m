@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.user = [UserParams new];
+        self.user = [[Person alloc] init];
     }
     return self;
 }

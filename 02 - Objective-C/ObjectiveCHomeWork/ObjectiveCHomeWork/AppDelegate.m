@@ -7,7 +7,9 @@
 
 #import "AppDelegate.h"
 #import "Prototype.h"
+#import "ObjectiveCHomeWork-Swift.h"
 
+@class Person;
 @interface AppDelegate ()
 
 @end
@@ -20,6 +22,14 @@
     //Тест домашней работы по GoF паттернам. Выбран паттерн: Прототип
     Test *test = [Test new];
     [test someClientCode];
+    
+    //Тест домашней работы по 04 - Interoperability
+    Person *object = [Person new];
+    NSLog(@"Client: Testing client code with the base factory type:");
+    [object testBuyClothesWithFactory: [SewFabric new]];
+          
+    NSLog(@"Client: Testing the same client code with modern factory type:");
+    [object testBuyClothesWithFactory: [ModernSewFabric new]];
     return YES;
 }
 

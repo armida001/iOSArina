@@ -11,6 +11,8 @@
 #import "NSLayoutConstraint_Extension.h"
 #import "ViewController_Protocol.h"
 
+@class PersonParameters;
+
 @interface DetailViewController () <ViewController_Protocol>
 
 @property(nonatomic, retain) UILabel *nameLabel;
@@ -90,13 +92,13 @@
     [NSLayoutConstraint activateConstraints: constrainsts];
 }
 
-- (void) update: (UserParams *) user {
+- (void) update: (Person *) user {
     _presenter.user = user;
-    
+    PersonParameters *params = user.parameters;
     _nameLabel.text = [[NSString alloc] initWithFormat: @"Имя: %@", user.name];
-    _ogLabel.text = [[NSString alloc] initWithFormat: @"Обхват груди: %@", user.og.stringValue];
-    _otLabel.text = [[NSString alloc] initWithFormat: @"Обхват талии: %@", user.ot.stringValue];
-    _obLabel.text = [[NSString alloc] initWithFormat: @"Обхват бёдер: %@", user.ob.stringValue];
+    _ogLabel.text = [[NSString alloc] initWithFormat: @"Обхват груди: %@", params.og.stringValue];
+    _otLabel.text = [[NSString alloc] initWithFormat: @"Обхват талии: %@", params.ot.stringValue];
+    _obLabel.text = [[NSString alloc] initWithFormat: @"Обхват бёдер: %@", params.ob.stringValue];
 }
 
 @end

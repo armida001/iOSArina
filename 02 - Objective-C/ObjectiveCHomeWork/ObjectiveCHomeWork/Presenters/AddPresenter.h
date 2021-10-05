@@ -5,11 +5,13 @@
 //  Created by Arina Zimonina on 04.10.2021.
 //
 
-#import "UserParams.h"
+#import "ObjectiveCHomeWork-Swift.h"
+
+@class Person;
 
 @interface AddPresenter : NSObject
 
-@property (nonatomic, retain) UserParams *user;
+@property (nonatomic, retain) Person *user;
 
 - (void) sendUser;
 

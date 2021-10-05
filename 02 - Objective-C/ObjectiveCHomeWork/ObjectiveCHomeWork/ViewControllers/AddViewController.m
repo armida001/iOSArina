@@ -132,9 +132,9 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     
-    self.presenter.user.og = [f numberFromString: _ogTextField.text];
-    self.presenter.user.ot = [f numberFromString: _otTextField.text];
-    self.presenter.user.ob = [f numberFromString: _obTextField.text];
+    self.presenter.user.parameters.og = [f numberFromString: _ogTextField.text];
+    self.presenter.user.parameters.ot = [f numberFromString: _otTextField.text];
+    self.presenter.user.parameters.ob = [f numberFromString: _obTextField.text];
     
     self.completion(self.presenter.user);
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -17,9 +17,10 @@
         nCell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier: ListTableViewCell.cellId];
     }
         
-    UserParams *user = self.userArray[indexPath.row];
+    Person *user = self.userArray[indexPath.row];
     nCell.textLabel.text = user.name;
-    nCell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%@ - %@ - %@", user.og, user.ot, user.ob];
+    PersonParameters *params = user.parameters;
+    nCell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%@ - %@ - %@", params.og.stringValue, params.ot.stringValue, params.ob.stringValue];
     return nCell;
 }
 
@@ -32,7 +33,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UserParams *user = self.userArray[indexPath.row];
+    Person *user = self.userArray[indexPath.row];
     self.showDetail(user);
 }
 

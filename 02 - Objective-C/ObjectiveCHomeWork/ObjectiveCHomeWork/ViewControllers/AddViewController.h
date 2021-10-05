@@ -6,10 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ObjectiveCHomeWork-Swift.h"
 
-#import "UserParams.h"
+@class Person;
+@class PersonParameters;
 
-typedef void (^AddUserBlock)(UserParams*_Nullable);
+typedef void (^AddUserBlock)(Person*_Nullable);
 
 @interface AddViewController: UIViewController<UITextFieldDelegate> 
 

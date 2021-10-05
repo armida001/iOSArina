@@ -26,11 +26,11 @@
     return _tableAdapter.userArray;
 }
 
-- (void) addUser: (UserParams *) newUser {
+- (void) addUser: (Person *) newUser {
     _tableAdapter.userArray = [_tableAdapter.userArray arrayByAddingObject: newUser];
 }
 
-- (void) setUsers: (NSArray<UserParams*> *) newUsers {
+- (void) setUsers: (NSArray<Person*> *) newUsers {
     _tableAdapter.userArray = newUsers;
 }
 

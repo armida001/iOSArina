@@ -26,23 +26,23 @@
 @implementation ListViewController
 
 - (void) initTestData {
-    UserParams *item = [UserParams new];
+    Person *item = [Person new];
     item.name = @"User 1";
-    item.og = @90;
-    item.ot = @60;
-    item.ob = @90;
+    item.parameters.og = @90;
+    item.parameters.ot = @60;
+    item.parameters.ob = @90;
     
-    UserParams *item1 = [UserParams new];
+    Person *item1 = [Person new];
     item1.name = @"User 2";
-    item1.og = @100;
-    item1.ot = @90;
-    item1.ob = @90;
+    item1.parameters.og = @100;
+    item1.parameters.ot = @90;
+    item1.parameters.ob = @90;
     
-    UserParams *item2 = [UserParams new];
+    Person *item2 = [Person new];
     item2.name = @"User 3";
-    item2.og = @90;
-    item2.ot = @80;
-    item2.ob = @104;
+    item2.parameters.og = @90;
+    item2.parameters.ot = @80;
+    item2.parameters.ob = @104;
     
     [_presenter setUsers: @[item, item1, item2]];
 }
@@ -54,7 +54,7 @@
     [self initAddButton];
     [self initTableView];
     
-    DetailUserBlock block = ^(UserParams *nUser) {
+    DetailUserBlock block = ^(Person *nUser) {
         DetailViewController *viewController = [[DetailViewController alloc] init];
         [viewController update: nUser];
         [self presentViewController: viewController animated: YES completion: nil];
@@ -110,7 +110,7 @@
 
 - (void) buttonClick {
     AddViewController *viewController = [[AddViewController alloc] init];
-    AddUserBlock blockName = ^(UserParams *nUser) {
+    AddUserBlock blockName = ^(Person *nUser) {
         [self.presenter addUser: nUser];
         [self.tableView reloadData];
         [viewController dismissViewControllerAnimated: YES completion: nil];

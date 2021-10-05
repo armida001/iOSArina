@@ -24,6 +24,9 @@
 		63DEA354270B7CA0008108D5 /* AddPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA353270B7CA0008108D5 /* AddPresenter.m */; };
 		63DEA358270BF975008108D5 /* NSLayoutConstraint_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA357270BF975008108D5 /* NSLayoutConstraint_Extension.m */; };
 		63DEA35D270C2399008108D5 /* Prototype.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA35C270C2399008108D5 /* Prototype.m */; };
+		63DEA363270C480D008108D5 /* Swifty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA362270C480D008108D5 /* Swifty.swift */; };
+		63DEA366270C4C5E008108D5 /* PersonParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA364270C4C5E008108D5 /* PersonParameters.swift */; };
+		63DEA367270C4C5E008108D5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DEA365270C4C5E008108D5 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,10 @@
 		63DEA35A270C0FC6008108D5 /* ViewController_Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController_Protocol.h; sourceTree = "<group>"; };
 		63DEA35C270C2399008108D5 /* Prototype.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prototype.m; sourceTree = "<group>"; };
 		63DEA35E270C23A8008108D5 /* Prototype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prototype.h; sourceTree = "<group>"; };
+		63DEA361270C480C008108D5 /* ObjectiveCHomeWork-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCHomeWork-Bridging-Header.h"; sourceTree = "<group>"; };
+		63DEA362270C480D008108D5 /* Swifty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swifty.swift; sourceTree = "<group>"; };
+		63DEA364270C4C5E008108D5 /* PersonParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonParameters.swift; sourceTree = "<group>"; };
+		63DEA365270C4C5E008108D5 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +99,7 @@
 		63DEA31B270B16DE008108D5 /* ObjectiveCHomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				63DEA35F270C47B4008108D5 /* Swift */,
 				63DEA35B270C2382008108D5 /* GoF */,
 				63DEA359270C0FAA008108D5 /* Protocols */,
 				63DEA355270BF7C1008108D5 /* Extensions */,
@@ -192,6 +200,17 @@
 			path = GoF;
 			sourceTree = "<group>";
 		};
+		63DEA35F270C47B4008108D5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				63DEA365270C4C5E008108D5 /* Person.swift */,
+				63DEA364270C4C5E008108D5 /* PersonParameters.swift */,
+				63DEA362270C480D008108D5 /* Swifty.swift */,
+				63DEA361270C480C008108D5 /* ObjectiveCHomeWork-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +241,7 @@
 				TargetAttributes = {
 					63DEA318270B16DE008108D5 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -264,6 +284,7 @@
 				63DEA35D270C2399008108D5 /* Prototype.m in Sources */,
 				63DEA349270B3E81008108D5 /* UserParams.m in Sources */,
 				63DEA338270B2D3A008108D5 /* ListViewController.m in Sources */,
+				63DEA363270C480D008108D5 /* Swifty.swift in Sources */,
 				63DEA324270B16DE008108D5 /* AddViewController.m in Sources */,
 				63DEA345270B2E36008108D5 /* ListPresenter.m in Sources */,
 				63DEA31E270B16DE008108D5 /* AppDelegate.m in Sources */,
@@ -272,7 +293,9 @@
 				63DEA34D270B584E008108D5 /* ListTableViewAdapter.m in Sources */,
 				63DEA358270BF975008108D5 /* NSLayoutConstraint_Extension.m in Sources */,
 				63DEA33B270B2D5F008108D5 /* DetailViewController.m in Sources */,
+				63DEA366270C4C5E008108D5 /* PersonParameters.swift in Sources */,
 				63DEA351270B60C0008108D5 /* ListTableViewCell.m in Sources */,
+				63DEA367270C4C5E008108D5 /* Person.swift in Sources */,
 				63DEA354270B7CA0008108D5 /* AddPresenter.m in Sources */,
 				63DEA344270B2E36008108D5 /* DetailPresenter.m in Sources */,
 			);
@@ -417,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjectiveCHomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,6 +449,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ext.ObjectiveCHomeWork.ObjectiveCHomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCHomeWork/Swift/ObjectiveCHomeWork-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -434,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjectiveCHomeWork/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +470,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ext.ObjectiveCHomeWork.ObjectiveCHomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCHomeWork/Swift/ObjectiveCHomeWork-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

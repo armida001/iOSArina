@@ -8,11 +8,12 @@
 #ifndef DetailViewController_h
 #define DetailViewController_h
 #import <UIKit/UIKit.h>
-#import "UserParams.h"
+#import "ObjectiveCHomeWork-Swift.h"
 
+@class Person;
 @interface DetailViewController: UIViewController
 
-- (void) update: (UserParams *) user;
+- (void) update: (Person *) user;
 
 @end
 
